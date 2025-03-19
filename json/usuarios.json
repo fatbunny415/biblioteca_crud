@@ -1,6 +1,10 @@
 db.usuarios[
     {
-        "nombre": "",
-        "correo": ""
+     
+nombre: "Juan"
+apellido: "Pérez"
+edad: 23
+contraseña: "123456789"
+email: "juan.perez@example.com"
     }
 ]   
