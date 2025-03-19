@@ -1,4 +1,4 @@
-[
+db.Libros[
     {
         "_id": "101",
         "titulo": "Cien Años de Soledad",
