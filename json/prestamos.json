@@ -1,4 +1,4 @@
-[
+db.Prestamos[
     {
         "usuario_id": "1",
         "libro_id": "101",
