@@ -1,0 +1,9 @@
+[
+    {
+        "_id": "201",
+        "usuario_id": "1",
+        "libro_id": "101",
+        "fecha_reserva": "2025-03-15",
+        "estado": "activa"
+    }
+]    
