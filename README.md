@@ -46,19 +46,19 @@ Abre: http://127.0.0.1:5000 en tu navegador.
 
 # 📸 Capturas del Aplicativo
 **Vista Principal del aplicativo**
-![VistaPrincipal](C:\Users\Daniel\Desktop\clases\biblioteca\biblioteca_crud\img\VistaPrincipa.png)
+![VistaPrincipal](https://github.com/fatbunny415/biblioteca_crud/blob/main/img/VistaPrincipa.png)
 ---
 
 **Vista de usuarios**
-![usuarios](C:\Users\Daniel\Desktop\clases\biblioteca\biblioteca_crud\img\usuario.png)
+![usuarios](https://github.com/fatbunny415/biblioteca_crud/blob/main/img/usuario.png)
 ---
 
 **Vista libros**
-![libros](C:\Users\Daniel\Desktop\clases\biblioteca\biblioteca_crud\img\libro.png)
+![libros](https://github.com/fatbunny415/biblioteca_crud/blob/main/img/libro.png)
 ---
 
 **Vista reservas**
-![resrvas](C:\Users\Daniel\Desktop\clases\biblioteca\biblioteca_crud\img\reserva.png)
+![reservas](https://github.com/fatbunny415/biblioteca_crud/blob/main/img/reserva.png)
 ---
 
 # 📂 Estructura del Proyecto
