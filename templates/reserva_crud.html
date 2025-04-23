@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Gestión de Reservas{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Gestión de Reservas</h1>
+    <form action="/reservas/agregar" method="POST" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="usuario_id">Usuario:</label>
+                <select class="form-select" name="usuario_id" required>
+                    <option value="" disabled selected>Selecciona un usuario</option>
+                    {% for usuario in usuarios %}
+                    <option value="{{ usuario.id }}">{{ usuario.nombre }} {{ usuario.apellido }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="libro_id">Libro:</label>
+                <select class="form-select" name="libro_id" required>
+                    <option value="" disabled selected>Selecciona un libro</option>
+                    {% for libro in libros %}
+                    <option value="{{ libro.id }}">{{ libro.titulo }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-12">
+                <label for="fechaReserva">Fecha de Reserva:</label>
+                <input type="date" class="form-control" name="fechaReserva" required>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary w-100">Agregar Reserva</button>
+            </div>
+        </div>
+    </form>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Libro</th>
+                <th>Fecha de Reserva</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reserva in reservas %}
+            <tr>
+                <td>{{ reserva.id }}</td>
+                <td>{{ reserva.usuario_id }}</td>
+                <td>{{ reserva.libro_id }}</td>
+                <td>{{ reserva.fechaReserva }}</td>
+                <td>
+                    <a href="/reservas/eliminar/{{ reserva.id }}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

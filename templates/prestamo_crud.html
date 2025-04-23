@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Gestión de Préstamos{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Gestión de Préstamos</h1>
+    <form action="/prestamos/agregar" method="POST" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="usuario_id">Usuario:</label>
+                <select class="form-select" name="usuario_id" required>
+                    <option value="" disabled selected>Selecciona un usuario</option>
+                    {% for usuario in usuarios %}
+                    <option value="{{ usuario.id }}">{{ usuario.nombre }} {{ usuario.apellido }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="libro_id">Libro:</label>
+                <select class="form-select" name="libro_id" required>
+                    <option value="" disabled selected>Selecciona un libro</option>
+                    {% for libro in libros %}
+                    <option value="{{ libro.id }}">{{ libro.titulo }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6"><input type="date" class="form-control" name="fechaPrestamos" required></div>
+            <div class="col-md-6"><input type="date" class="form-control" name="fechaDevolucion" required></div>
+            <div class="col-md-12">
+                <input type="text" class="form-control" name="estado" placeholder="Estado (En curso, Devuelto)" required>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary w-100">Agregar Préstamo</button>
+            </div>
+        </div>
+    </form>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Libro</th>
+                <th>Fecha Préstamo</th>
+                <th>Fecha Devolución</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prestamo in prestamos %}
+            <tr>
+                <td>{{ prestamo.id }}</td>
+                <td>{{ prestamo.usuario_id }}</td>
+                <td>{{ prestamo.libro_id }}</td>
+                <td>{{ prestamo.fechaPrestamos }}</td>
+                <td>{{ prestamo.fechaDevolucion }}</td>
+                <td>{{ prestamo.estado }}</td>
+                <td>
+                    <a href="/prestamos/eliminar/{{ prestamo.id }}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

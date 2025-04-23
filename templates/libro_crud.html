@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Gestión de Libros{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Gestión de Libros</h1>
+    <form action="/libros/agregar" method="POST" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-6"><input type="text" class="form-control" name="titulo" placeholder="Título" required></div>
+            <div class="col-md-6"><input type="text" class="form-control" name="autor" placeholder="Autor" required></div>
+            <div class="col-md-6"><input type="text" class="form-control" name="isbn" placeholder="ISBN" required></div>
+            <div class="col-md-6"><input type="text" class="form-control" name="categoria" placeholder="Categoría" required></div>
+            <div class="col-md-12"><input type="number" class="form-control" name="ejemplares" placeholder="Número de Ejemplares" required></div>
+            <div class="col-md-12"><button type="submit" class="btn btn-primary w-100">Agregar Libro</button></div>
+        </div>
+    </form>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>ISBN</th>
+                <th>Categoría</th>
+                <th>Ejemplares</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for libro in libros %}
+            <tr>
+                <td>{{ libro.id }}</td>
+                <td>{{ libro.titulo }}</td>
+                <td>{{ libro.autor }}</td>
+                <td>{{ libro.isbn }}</td>
+                <td>{{ libro.categoria }}</td>
+                <td>{{ libro.ejemplares }}</td>
+                <td>
+                    <!-- Botón para Editar -->
+                    <form action="/libros/editar/{{ libro.id }}" method="POST" class="d-inline">
+                        <button type="submit" class="btn btn-warning btn-sm">Editar</button>
+                    </form>
+                    <!-- Botón para Eliminar -->
+                    <a href="/libros/eliminar/{{ libro.id }}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
