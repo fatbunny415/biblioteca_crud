@@ -1,56 +1,65 @@
-📚 Biblioteca
-✨ Descripción
-Aplicación web para gestionar operaciones de biblioteca (usuarios, libros, reservas, préstamos) con interfaz intuitiva y conexión a MongoDB. Incluye operaciones CRUD y diseño responsivo.
+¡Por supuesto, Daniel! Aquí tienes tu README completamente formateado en Markdown para GitHub:
+# 📚 Biblioteca
 
-🌟 Características Principales
-- 👥 Gestión completa: usuarios, libros, reservas, préstamos.
-- 🔄 Operaciones CRUD para todas las entidades.
-- 🖥️ Interfaz responsiva con Bootstrap.
-- 🍃 Conexión estable a MongoDB mediante pymongo.
-- 🔍 Búsqueda avanzada en colecciones.
+✨ **Descripción**  
+Aplicación web para gestionar operaciones de biblioteca (**usuarios**, **libros**, **reservas**, **préstamos**) con interfaz intuitiva y conexión a **MongoDB**. Incluye operaciones CRUD y diseño responsivo.
 
+---
 
-🛠️ Tecnologías Utilizadas
-| Backend | Frontend | Base de Datos | Conexión | 
-| Python | Bootstrap | MongoDB | PyMongo | 
+## 🌟 Características Principales  
+- 👥 Gestión completa: **usuarios, libros, reservas, préstamos**.  
+- 🔄 **Operaciones CRUD** para todas las entidades.  
+- 🖥️ Interfaz responsiva con **Bootstrap**.  
+- 🍃 Conexión estable a **MongoDB** mediante `pymongo`.  
+- 🔍 Búsqueda avanzada en colecciones.  
 
+---
 
+## 🛠️ Tecnologías Utilizadas  
+| **Backend** | **Frontend** | **Base de Datos** | **Conexión** |  
+|-------------|--------------|-------------------|--------------|  
+| Python      | Bootstrap    | MongoDB           | PyMongo      |  
 
-⚙️ Instalación
-- Clonar repositorio:git clone https://github.com/tuusuario/biblioteca.git  
-cd biblioteca  
+---
 
+## ⚙️ Instalación  
+- **Clonar repositorio**:  
+   ```bash  
+   git clone https://github.com/tuusuario/biblioteca.git  
+   cd biblioteca  
+
+
 - Instalar dependencias:pip install flask pymongo  
 
-- Configurar MongoDB:- Modifica la URI de conexión en app.py (ejemplo: mongodb://localhost:27017).
-
-- Ejecutar aplicación:python app.py
-- Abre: http://127.0.0.1:5000 en tu navegador.
-
+- Configurar MongoDB:
+Modifica la URI de conexión en app.py (ejemplo: mongodb://localhost:27017).
+- Ejecutar aplicación:python app.py  
+Abre: http://127.0.0.1:5000 en tu navegador.
 
 
 🚀 Uso
-- Secciones:- 📖 Libros: Añade, edita o elimina títulos.
+Secciones:
+- 📖 Libros: Añade, edita o elimina títulos.
 - 👥 Usuarios: Gestiona miembros de la biblioteca.
 - 🔄 Préstamos/Reservas: Controla fechas y estados.
+- 🔍 Búsqueda: Filtra datos en cualquier colección.
 
-- Búsqueda: Filtra datos en cualquier colección.
 
 📸 Capturas del Aplicativo
-(Aquí puedes usar las capturas actuales, ya que el diseño y las funcionalidades siguen siendo las mismas).
+(Puedes usar las capturas actuales, ya que el diseño y las funcionalidades siguen siendo las mismas).
 
 📂 Estructura del Proyecto
-biblioteca/
-├── templates/          # Plantillas HTML
-│   ├── index.html      # Página principal
-│   ├── usuario_crud.html
-│   ├── libro_crud.html
-│   └── ...
-├── static/             # Assets
-│   ├── css/            # Estilos Bootstrap
-│   └── js/             # Scripts (opcional)
-├── app.py              # Lógica principal
-└── README.md           # Documentación
+biblioteca/  
+├── templates/          # Plantillas HTML  
+│   ├── index.html      # Página principal  
+│   ├── usuario_crud.html  
+│   ├── libro_crud.html  
+│   └── ...  
+├── static/             # Assets  
+│   ├── css/            # Estilos Bootstrap  
+│   └── js/             # Scripts (opcional)  
+├── app.py              # Lógica principal  
+└── README.md           # Documentación  
 
 
 
@@ -94,6 +103,7 @@ biblioteca/
 MIT © 2024 - Libre uso y modificación.
 - Créditos: Fatush🐂.
 - Nequi: 3007973265 por si alguna donación.
+
 
 **Vista Principal del aplicativo**
 ![VistaPrincipal](C:\Users\Daniel\Desktop\clases\biblioteca\biblioteca_crud\img\VistaPrincipa.png)
